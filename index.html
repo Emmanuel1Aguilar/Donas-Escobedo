@@ -1,1 +1,189 @@
-<h1>Hola mundo </h1>
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Las donas más deliciosas y frescas. Ordena en línea y disfruta hoy mismo.">
+  <meta name="keywords" content="donas, donuts, repostería, dulce, panadería, tienda de donas">
+  <meta name="author" content="Tu Nombre o Marca">
+  <title>Donas Deliciosas | Tienda Oficial</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      line-height: 1.6;
+      color: #333;
+      background: #fff8f0;
+    }
+
+    header {
+      background: #ff69b4;
+      color: white;
+      padding: 20px;
+      text-align: center;
+    }
+
+    nav {
+      margin-top: 10px;
+    }
+
+    nav a {
+      color: white;
+      margin: 0 15px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .hero {
+      text-align: center;
+      padding: 60px 20px;
+      background: url('https://images.unsplash.com/photo-1546549039-57f1aa7cfbde') no-repeat center;
+      background-size: cover;
+      color: white;
+    }
+
+    .hero h1 {
+      font-size: 3rem;
+      text-shadow: 2px 2px 4px #000;
+    }
+
+    .hero p {
+      font-size: 1.2rem;
+      margin-top: 10px;
+      background-color: rgba(0,0,0,0.5);
+      display: inline-block;
+      padding: 10px 20px;
+      border-radius: 8px;
+    }
+
+    .seccion {
+      padding: 40px 20px;
+      max-width: 1000px;
+      margin: auto;
+    }
+
+    .seccion h2 {
+      color: #d14e87;
+      margin-bottom: 20px;
+      text-align: center;
+    }
+
+    .productos {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 20px;
+    }
+
+    .producto {
+      background: white;
+      border-radius: 8px;
+      padding: 20px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    }
+
+    .producto img {
+      width: 100%;
+      height: auto;
+      border-radius: 8px;
+    }
+
+    .producto h3 {
+      margin-top: 10px;
+      font-size: 1.1rem;
+    }
+
+    .producto p {
+      color: #777;
+      font-size: 0.9rem;
+    }
+
+    .boton {
+      display: inline-block;
+      margin-top: 10px;
+      padding: 10px 20px;
+      background: #ff69b4;
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+    }
+
+    footer {
+      background: #222;
+      color: white;
+      text-align: center;
+      padding: 30px 10px;
+      margin-top: 40px;
+    }
+
+    @media (max-width: 600px) {
+      .hero h1 {
+        font-size: 2rem;
+      }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Donas Deliciosas</h1>
+    <nav>
+      <a href="#productos">Productos</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+  </header>
+
+  <section class="hero">
+    <h1>¡Bienvenido al paraíso de las donas!</h1>
+    <p>Hechas con amor, frescas cada mañana</p>
+  </section>
+
+  <section class="seccion" id="productos">
+    <h2>Nuestras Donas</h2>
+    <div class="productos">
+      <div class="producto">
+        <img src="https://images.unsplash.com/photo-1613141411344-fd48b5cd1d7f" alt="Dona de chocolate">
+        <h3>Dona de Chocolate</h3>
+        <p>Suave y deliciosa, cubierta con chocolate derretido.</p>
+        <a href="#" class="boton">Ordenar</a>
+      </div>
+      <div class="producto">
+        <img src="https://images.unsplash.com/photo-1616486153064-0bfae833f1f4" alt="Dona glaseada">
+        <h3>Dona Glaseada</h3>
+        <p>Clásica, brillante y simplemente irresistible.</p>
+        <a href="#" class="boton">Ordenar</a>
+      </div>
+      <div class="producto">
+        <img src="https://images.unsplash.com/photo-1624377632485-44e2b0a0458c" alt="Dona de fresa">
+        <h3>Dona de Fresa</h3>
+        <p>Con glaseado de fresa natural y toppings dulces.</p>
+        <a href="#" class="boton">Ordenar</a>
+      </div>
+    </div>
+  </section>
+
+  <section class="seccion" id="nosotros">
+    <h2>Sobre Nosotros</h2>
+    <p>
+      Somos una panadería artesanal dedicada a endulzar tus días con las mejores donas.
+      Usamos ingredientes frescos y recetas tradicionales con un toque moderno.
+    </p>
+  </section>
+
+  <section class="seccion" id="contacto">
+    <h2>Contáctanos</h2>
+    <p>📍 Calle Dulce #123, Ciudad Pastel</p>
+    <p>📞 +52 123 456 7890</p>
+    <p>📧 contacto@donasdeliciosas.com</p>
+  </section>
+
+  <footer>
+    <p>&copy; 2025 Donas Deliciosas. Todos los derechos reservados.</p>
+  </footer>
+</body>
+</html>
