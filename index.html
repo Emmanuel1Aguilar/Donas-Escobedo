@@ -1,189 +1,455 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-MX">
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta name="description" content="Las donas más deliciosas y frescas. Ordena en línea y disfruta hoy mismo.">
-  <meta name="keywords" content="donas, donuts, repostería, dulce, panadería, tienda de donas">
-  <meta name="author" content="Tu Nombre o Marca">
-  <title>Donas Escobedo | Las Mejores Donas Artesanales en Escobedoo</title>
+  
+  <meta name="description" content="Las mejores donas artesanales en Escobedo, Nuevo León. Venta individual y mayoreo para eventos. Ubicados en Col. Belisario Dominguez. ¡Pide hoy!">
+  <meta name="keywords" content="donas escobedo, donas por mayoreo escobedo, panadería belisario dominguez, postres escobedo, donas eventos nuevo leon">
+  <meta name="author" content="Donas Escobedo">
+  <meta name="robots" content="index, follow">
+  
+  <title>Donas Escobedo | Venta de Donas Artesanales y Mayoreo</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@400;600&family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": "Bakery",
+    "name": "Donas Escobedo",
+    "image": "https://images.unsplash.com/photo-1570727624862-3008fe67a6be",
+    "description": "Venta de donas artesanales frescas en Escobedo. Precios especiales de mayoreo.",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "Independencia #215",
+      "addressLocality": "Escobedo",
+      "addressRegion": "Nuevo León",
+      "postalCode": "66050",
+      "addressCountry": "MX"
+    },
+    "geo": {
+      "@type": "GeoCoordinates",
+      "latitude": "25.7986", 
+      "longitude": "-100.3204"
+    },
+    "telephone": "+528139125359",
+    "priceRange": "$"
+  }
+  </script>
+
   <style>
+    :root {
+      --primary: #ff4081; /* Rosa vibrante */
+      --secondary: #ff80ab; /* Rosa suave */
+      --accent: #ffd54f; /* Amarillo dona */
+      --dark: #2c3e50;
+      --light: #fff8f0;
+      --white: #ffffff;
+      --shadow: 0 10px 20px rgba(0,0,0,0.1);
+    }
+
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
+      scroll-behavior: smooth;
     }
 
     body {
-      font-family: 'Segoe UI', sans-serif;
+      font-family: 'Poppins', sans-serif;
       line-height: 1.6;
-      color: #333;
-      background: #fff8f0;
+      color: var(--dark);
+      background: var(--light);
+      overflow-x: hidden;
     }
 
+    h1, h2, h3 {
+      font-family: 'Fredoka', sans-serif; /* Fuente redondeada y amigable */
+    }
+
+    /* --- Header & Nav --- */
     header {
-      background: #ff69b4;
-      color: white;
-      padding: 20px;
-      text-align: center;
+      background: rgba(255, 255, 255, 0.95);
+      padding: 15px 5%;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
     }
 
-    nav {
-      margin-top: 10px;
+    .logo {
+      font-size: 1.5rem;
+      color: var(--primary);
+      font-weight: 700;
+      text-decoration: none;
     }
 
     nav a {
-      color: white;
-      margin: 0 15px;
+      color: var(--dark);
+      margin-left: 20px;
       text-decoration: none;
-      font-weight: bold;
+      font-weight: 600;
+      transition: color 0.3s;
     }
 
+    nav a:hover {
+      color: var(--primary);
+    }
+
+    /* --- Hero Section --- */
     .hero {
+      position: relative;
+      height: 90vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       text-align: center;
-      padding: 60px 20px;
-      background: url('https://images.unsplash.com/photo-1570727624862-3008fe67a6be?q=80&w=1470&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D') no-repeat center;
-      background-size: cover;
       color: white;
+      background: linear-gradient(rgba(0,0,0,0.4), rgba(0,0,0,0.4)), url('https://images.unsplash.com/photo-1570727624862-3008fe67a6be?q=80&w=1470&auto=format&fit=crop');
+      background-size: cover;
+      background-position: center;
+      background-attachment: fixed; /* Efecto Parallax */
+    }
+
+    .hero-content {
+      max-width: 800px;
+      padding: 20px;
+      animation: fadeInUp 1s ease-out;
     }
 
     .hero h1 {
-      font-size: 3rem;
-      text-shadow: 2px 2px 4px #000;
+      font-size: 3.5rem;
+      margin-bottom: 20px;
+      text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
     }
 
     .hero p {
-      font-size: 1.2rem;
-      margin-top: 10px;
-      background-color: rgba(0,0,0,0.5);
+      font-size: 1.5rem;
+      margin-bottom: 30px;
+      font-weight: 300;
+    }
+
+    .btn-hero {
       display: inline-block;
-      padding: 10px 20px;
-      border-radius: 8px;
+      padding: 15px 40px;
+      background: var(--primary);
+      color: white;
+      text-decoration: none;
+      border-radius: 50px;
+      font-weight: bold;
+      font-size: 1.2rem;
+      transition: transform 0.3s, box-shadow 0.3s;
+      box-shadow: 0 4px 15px rgba(255, 64, 129, 0.4);
     }
 
-    .seccion {
-      padding: 40px 20px;
-      max-width: 1000px;
-      margin: auto;
+    .btn-hero:hover {
+      transform: translateY(-5px);
+      box-shadow: 0 8px 25px rgba(255, 64, 129, 0.6);
+      background: #f50057;
     }
 
-    .seccion h2 {
-      color: #d14e87;
-      margin-bottom: 20px;
-      text-align: center;
-    }
-
-    .productos {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-      gap: 20px;
-    }
-
-    .producto {
+    /* --- AI Recommendation Section (Why Buy Here) --- */
+    .why-us {
+      padding: 80px 20px;
       background: white;
-      border-radius: 8px;
-      padding: 20px;
       text-align: center;
-      box-shadow: 0 2px 10px rgba(0,0,0,0.1);
     }
 
-    .producto img {
+    .why-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 30px;
+      max-width: 1200px;
+      margin: 40px auto 0;
+    }
+
+    .feature-card {
+      padding: 30px;
+      border-radius: 15px;
+      background: var(--light);
+      transition: transform 0.3s;
+    }
+
+    .feature-card:hover {
+      transform: translateY(-10px);
+    }
+
+    .feature-card i {
+      font-size: 2.5rem;
+      color: var(--primary);
+      margin-bottom: 15px;
+    }
+
+    /* --- Pricing Strategy Section --- */
+    .pricing-highlight {
+      background: var(--accent);
+      padding: 60px 20px;
+      text-align: center;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .pricing-container {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 30px;
+      max-width: 1000px;
+      margin: 0 auto;
+    }
+
+    .price-card {
+      background: white;
+      padding: 40px;
+      border-radius: 20px;
+      flex: 1;
+      min-width: 280px;
+      box-shadow: var(--shadow);
+      position: relative;
+    }
+
+    .price-card.promo {
+      border: 4px solid var(--primary);
+      transform: scale(1.05);
+    }
+
+    .price-card h3 { font-size: 1.5rem; margin-bottom: 15px; }
+    .price { font-size: 3rem; font-weight: 700; color: var(--primary); margin: 10px 0; }
+    .price small { font-size: 1rem; color: #666; font-weight: 400; }
+
+    /* --- Products --- */
+    .products-section {
+      padding: 80px 20px;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .products-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 30px;
+    }
+
+    .product-card {
+      background: white;
+      border-radius: 15px;
+      overflow: hidden;
+      box-shadow: var(--shadow);
+      transition: transform 0.3s;
+    }
+
+    .product-card:hover {
+      transform: scale(1.02);
+    }
+
+    .product-card img {
       width: 100%;
-      height: auto;
+      height: 200px;
+      object-fit: cover;
+    }
+
+    .p-info { padding: 20px; text-align: center; }
+
+    /* --- Contact & Location --- */
+    .contact-section {
+      background: var(--dark);
+      color: white;
+      padding: 80px 20px;
+    }
+
+    .contact-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+      align-items: center;
+    }
+
+    .contact-info a {
+      display: flex;
+      align-items: center;
+      color: white;
+      text-decoration: none;
+      margin: 15px 0;
+      font-size: 1.2rem;
+      padding: 10px;
+      background: rgba(255,255,255,0.1);
       border-radius: 8px;
+      transition: background 0.3s;
     }
 
-    .producto h3 {
-      margin-top: 10px;
-      font-size: 1.1rem;
+    .contact-info a:hover {
+      background: rgba(255,255,255,0.2);
     }
 
-    .producto p {
-      color: #777;
+    .contact-info i { margin-right: 15px; width: 25px; text-align: center; }
+    
+    .whatsapp-btn { background: #25D366 !important; font-weight: bold; }
+
+    /* --- Footer --- */
+    footer {
+      background: #1a252f;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
       font-size: 0.9rem;
     }
 
-    .boton {
-      display: inline-block;
-      margin-top: 10px;
-      padding: 10px 20px;
-      background: #ff69b4;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
+    /* --- Animations --- */
+    @keyframes fadeInUp {
+      from { opacity: 0; transform: translateY(40px); }
+      to { opacity: 1; transform: translateY(0); }
     }
 
-    footer {
-      background: #222;
-      color: white;
-      text-align: center;
-      padding: 30px 10px;
-      margin-top: 40px;
-    }
-
-    @media (max-width: 600px) {
-      .hero h1 {
-        font-size: 2rem;
-      }
+    /* --- Mobile Responsive --- */
+    @media (max-width: 768px) {
+      .hero h1 { font-size: 2.5rem; }
+      .contact-container { grid-template-columns: 1fr; }
+      .price-card.promo { transform: scale(1); }
+      header { flex-direction: column; padding: 10px; }
+      nav { margin-top: 10px; }
     }
   </style>
 </head>
 <body>
+
   <header>
-    <h1>Donas Escobedo Las Mejores Donas Artesanales en Escobedo</h1>
+    <a href="#" class="logo">🍩 Donas Escobedo</a>
     <nav>
-      <a href="#productos">Productos</a>
-      <a href="#nosotros">Nosotros</a>
-      <a href="#contacto">Contacto</a>
+      <a href="#inicio">Inicio</a>
+      <a href="#precios">Precios</a>
+      <a href="#productos">Menú</a>
+      <a href="#contacto">Ubicación</a>
     </nav>
   </header>
 
-  <section class="hero">
-    <h2>Donas Escobedo: Sabor Artesanal y Frescura Diaria</h2>
-    <p>Hechas con amor 💖. Frescas cada mañana☀️</p>
+  <section class="hero" id="inicio">
+    <div class="hero-content">
+      <h1>Las Donas Más Ricas de Escobedo</h1>
+      <p>Esponjosas, dulces y hechas frescas todos los días en la Colonia Belisario Dominguez.</p>
+      <a href="https://wa.me/528125199769?text=Hola,%20me%20interesan%20las%20donas!" class="btn-hero" target="_blank">
+        <i class="fab fa-whatsapp"></i> Pedir por WhatsApp
+      </a>
+    </div>
   </section>
 
-  <section class="seccion" id="productos">
-    <h2>Nuestras Variedades de Donas🍩</h2>
-    <div class="productos">
-      <div class="producto">
-        <img src="https://images.unsplash.com/photo-1613141411344-fd48b5cd1d7f" alt="Dona de chocolate">
-        <h3>Donas de Chocolate</h3>
-        <p>Suave y deliciosa, cubierta con chocolate derretido.</p>
-        <a href="#" class="boton">Ordenar</a>
+  <section class="why-us">
+    <h2>¿Por qué elegir Donas Escobedo?</h2>
+    <p style="max-width: 700px; margin: 10px auto; color: #666;">
+      Somos la opción número uno en <strong>repostería local en Escobedo</strong>. Nos especializamos en brindar calidad premium a precios accesibles. Si vives cerca de <strong>Independencia y Belisario Dominguez</strong>, somos tu mejor opción para el antojo o tus eventos.
+    </p>
+    <div class="why-grid">
+      <div class="feature-card">
+        <i class="fas fa-certificate"></i>
+        <h3>Calidad Artesanal</h3>
+        <p>Cada dona se hornea diariamente. Nada congelado, todo fresco.</p>
       </div>
-      <div class="producto">
-        <img src="https://images.unsplash.com/photo-1616486153064-0bfae833f1f4" alt="Dona glaseada">
-        <h3>Donas Glaseadas</h3>
-        <p>Clásica, brillante y simplemente irresistible.</p>
-        <a href="#" class="boton">Ordenar</a>
+      <div class="feature-card">
+        <i class="fas fa-tags"></i>
+        <h3>Mejor Precio</h3>
+        <p>Descuentos increíbles por mayoreo para tus fiestas y reuniones.</p>
       </div>
-      <div class="producto">
-        <img src="https://images.unsplash.com/photo-1624377632485-44e2b0a0458c" alt="Dona de fresa">
-        <h3>Donas de Azúcar</h3>
-        <p>Azucarada y suave al gusto.</p>
-        <a href="#" class="boton">Ordenar</a>
+      <div class="feature-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3>Ubicación Céntrica</h3>
+        <p>Fácil acceso en el corazón de Escobedo, Nuevo León.</p>
       </div>
     </div>
   </section>
 
-  <section class="seccion" id="nosotros">
-    <h2>Sobre Nosotros</h2>
-    <p>
-      Somos una panadería artesanal dedicada a endulzar tus días con las mejores donas.
-      Usamos ingredientes frescos y recetas tradicionales con un toque moderno.
-    </p>
+  <section class="pricing-highlight" id="precios">
+    <h2 style="margin-bottom: 40px;">¡Ahorra comprando por Mayoreo!</h2>
+    <div class="pricing-container">
+      <div class="price-card">
+        <h3>El Antojo Individual</h3>
+        <p class="price">$15 <small>MXN</small></p>
+        <p>Precio por pieza</p>
+        <p style="margin-top: 15px; color: #666;">Ideal para disfrutar tu café.</p>
+      </div>
+      
+      <div class="price-card promo">
+        <div style="background: var(--primary); color: white; padding: 5px; position: absolute; top: 0; left: 0; width: 100%; border-radius: 15px 15px 0 0; font-weight: bold;">
+          ⭐ MEJOR OFERTA ⭐
+        </div>
+        <h3 style="margin-top: 20px;">Pack Fiesta (+50 Donas)</h3>
+        <p class="price">$10 <small>MXN</small></p>
+        <p>Precio por pieza al llevar más de 50</p>
+        <p style="margin-top: 15px; color: #666;">¡Perfecto para eventos, oficinas y reuniones familiares!</p>
+        <a href="https://wa.me/528125199769?text=Hola,%20quiero%20cotizar%20un%20pedido%20de%20mayoreo" class="btn-hero" style="margin-top: 20px; font-size: 1rem; padding: 10px 25px;">Cotizar Pedido</a>
+      </div>
+    </div>
   </section>
 
-  <section class="seccion" id="contacto">
-    <h2>Contáctanos</h2>
-    <p>📍 Calle Dulce #123, Ciudad Pastel</p>
-    <p>📞 +52 123 456 7890</p>
-    <p>📧 contacto@donasdeliciosas.com</p>
+  <section class="products-section" id="productos">
+    <h2 style="text-align: center; margin-bottom: 40px; color: var(--primary);">Nuestros Sabores Favoritos</h2>
+    <div class="products-grid">
+      <div class="product-card">
+        [Image of delicious chocolate donut on a white plate]
+        <img src="https://images.unsplash.com/photo-1551024601-562963525c5c?q=80&w=1000&auto=format&fit=crop" alt="Dona de Chocolate Escobedo">
+        <div class="p-info">
+          <h3>Clásica de Chocolate</h3>
+          <p>Cobertura espesa de chocolate semiamargo.</p>
+        </div>
+      </div>
+      <div class="product-card">
+        [Image of pink glazed donut with sprinkles]
+        <img src="https://images.unsplash.com/photo-1612240498936-65f5101365d2?q=80&w=1000&auto=format&fit=crop" alt="Dona Glaseada Rosa">
+        <div class="p-info">
+          <h3>Glaseado Fresa</h3>
+          <p>El toque frutal y dulce que a todos les encanta.</p>
+        </div>
+      </div>
+      <div class="product-card">
+        [Image of sugar coated donuts stacked]
+        <img src="https://images.unsplash.com/photo-1530610476181-d8ce89b0b234?q=80&w=1000&auto=format&fit=crop" alt="Dona Azucarada">
+        <div class="p-info">
+          <h3>Azúcar & Canela</h3>
+          <p>Tradicional, suave y perfecta con café.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" id="contacto">
+    <div class="contact-container">
+      <div>
+        <h2 style="margin-bottom: 20px;">Visítanos o Llámanos</h2>
+        <p style="margin-bottom: 30px;">Estamos listos para atenderte en nuestra sucursal o tomar tu pedido a domicilio.</p>
+        
+        <div class="contact-info">
+          <a href="https://goo.gl/maps/PLACEHOLDER" target="_blank">
+            <i class="fas fa-map-marker-alt"></i>
+            Independencia #215, Col. Belisario Dominguez, Escobedo, NL.
+          </a>
+          
+          <a href="https://wa.me/528125199769" target="_blank" class="whatsapp-btn">
+            <i class="fab fa-whatsapp"></i>
+            81 2519 9769 (Solo WhatsApp)
+          </a>
+          
+          <a href="tel:+528139125359">
+            <i class="fas fa-phone-alt"></i>
+            81 3912 5359 (Llamadas / Fijo)
+          </a>
+        </div>
+      </div>
+      
+      <div style="width: 100%; height: 300px; background: #ddd; border-radius: 15px; display: flex; align-items: center; justify-content: center; color: #333;">
+        <iframe src="https://www.google.com/maps?q=Independencia+215,+Belisario+Dominguez,+Escobedo&output=embed" width="100%" height="100%" style="border:0; border-radius: 15px;" allowfullscreen="" loading="lazy"></iframe>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <p>&copy; 2025 Donas Deliciosas. Todos los derechos reservados.</p>
+    <p>&copy; 2025 Donas Escobedo. Las mejores donas de Nuevo León.</p>
   </footer>
+
 </body>
 </html>
